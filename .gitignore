@@ -1,0 +1,4 @@
+.idea/
+
+# Django
+db.sqlite3
