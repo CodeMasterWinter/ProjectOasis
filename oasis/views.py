@@ -48,6 +48,10 @@ def contact(request):
 
     context = {
         'ContactForm': form,
+        'branches': ['Daveyton - Main', 'Carletonville',
+                     'Etwatwa', 'Katlehong', 'Tembisa',
+                     'Wattville', 'Braamfischerville',
+                     'Umlazi', 'Vosloorus'],
     }
 
     return render(request, 'oasis/contact.html', context)
