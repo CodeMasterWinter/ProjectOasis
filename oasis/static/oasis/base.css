@@ -68,11 +68,25 @@ nav {
     text-align: center;
 }
 
+.live::after{
+    bottom: 0;
+    width: 30%;
+    z-index: 10;
+    content: "";
+    height: 3px;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+    position: absolute;
+}
+
 .nav-link {
     width: 100%;
     height: 100%;
+    display: flex;
     color: #ffffff;
     font-weight: 600;
+    position: relative;
+    align-items: center;
+    justify-content: center;
     text-transform: uppercase;
     transition: all 0.3s ease;
 }

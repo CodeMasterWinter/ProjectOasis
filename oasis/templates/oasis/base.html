@@ -31,10 +31,10 @@
                         <div class="navbar-block navbar-left">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="{% url 'home' %}" class="nav-link">Home</a>
+                                    <a href="{% url 'home' %}" class="{% if page_title == 'Home' %}live{% endif %} nav-link">Home</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Branches</a>
+                                    <a href="" class="{% if page_title == 'Branches' %}live{% endif %} nav-link">Branches</a>
                                     <div class="branches-dropdown p-2">
                                         {% for branch in branches %}
                                             <a class="product-link" href="#">{{branch}}</a>
@@ -42,20 +42,20 @@
                                     </div>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">NexGen Youth</a>
+                                    <a href="" class="{% if page_title == 'NexGen Youth' %}live{% endif %} nav-link">NexGen Youth</a>
                                 </li>
                             </ul>
                         </div>
                         <div class="navbar-block navbar-right">
                             <ul class="navbar-nav">
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Projects</a>
+                                    <a href="" class="{% if page_title == 'Projects' %}live{% endif %} nav-link">Projects</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="" class="nav-link">Meet the family</a>
+                                    <a href="" class="{% if page_title == 'Family' %}live{% endif %} nav-link">Meet the family</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="{% url 'contact' %}" class="nav-link">Contact</a>
+                                    <a href="{% url 'contact' %}" class="{% if page_title == 'Contact' %}live{% endif %} nav-link">Contact</a>
                                 </li>
                             </ul>
                         </div>

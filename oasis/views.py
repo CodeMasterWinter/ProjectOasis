@@ -47,6 +47,7 @@ def contact(request):
         form = ContactForm()
 
     context = {
+        'page_title': 'Contact',
         'ContactForm': form,
         'branches': ['Daveyton - Main', 'Carletonville',
                      'Etwatwa', 'Katlehong', 'Tembisa',
@@ -55,3 +56,10 @@ def contact(request):
     }
 
     return render(request, 'oasis/contact.html', context)
+
+
+def branches(request):
+
+    context = {
+        'page_title': 'Branches',
+    }

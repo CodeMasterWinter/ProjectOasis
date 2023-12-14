@@ -26,7 +26,7 @@ header {
     height: 75vh;
     display: flex;
     flex-direction: column;
-    background: url('images/contact-bg.jpg') left no-repeat;
+    background: url('images/contact-bg-two.jpg') left no-repeat;
     background-size: cover;
 }
 
