@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from .models import Branch
 from .forms import ContactForm
 from django.contrib import messages
 from django.http import HttpResponse
@@ -7,14 +7,12 @@ from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 # Create your views here.
 
+
 def home(request):
 
     context = {
         'page_title': 'Home',
-        'branches': ['Daveyton - Main', 'Carletonville',
-                     'Etwatwa', 'Katlehong', 'Tembisa',
-                     'Wattville', 'Braamfischerville',
-                     'Umlazi', 'Vosloorus']
+        'branches': list(Branch.objects.all())
     }
 
     return render(request, 'oasis/home.html', context)
@@ -49,17 +47,17 @@ def contact(request):
     context = {
         'page_title': 'Contact',
         'ContactForm': form,
-        'branches': ['Daveyton - Main', 'Carletonville',
-                     'Etwatwa', 'Katlehong', 'Tembisa',
-                     'Wattville', 'Braamfischerville',
-                     'Umlazi', 'Vosloorus'],
+        'branches': [branch for branch in Branch.objects.all()],
     }
 
     return render(request, 'oasis/contact.html', context)
 
 
-def branches(request):
+def branches(request, branch):
+
+    branch = Branch.objects.filter(id=branch.id)
 
     context = {
+        'branch': branch,
         'page_title': 'Branches',
     }

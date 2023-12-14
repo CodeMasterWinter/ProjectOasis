@@ -37,7 +37,7 @@
                                     <a href="" class="{% if page_title == 'Branches' %}live{% endif %} nav-link">Branches</a>
                                     <div class="branches-dropdown p-2">
                                         {% for branch in branches %}
-                                            <a class="product-link" href="#">{{branch}}</a>
+                                            <a class="product-link" href="{% url 'branch' branch.id %}">{{branch}}</a>
                                         {% endfor %}
                                     </div>
                                 </li>
