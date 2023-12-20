@@ -7,7 +7,7 @@ from . import views
 urlpatterns = [
     path('', views.home, name="home"),
     path('contact/', views.contact, name="contact"),
-    path('branch/<str:branch>', views.branches, name="branch"),
+    path('branch/<str:name>', views.branches, name="branch"),
 ]
 
 if settings.DEBUG:

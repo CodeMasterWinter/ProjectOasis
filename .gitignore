@@ -2,3 +2,5 @@
 
 # Django
 db.sqlite3
+
+oasis/__pycache__

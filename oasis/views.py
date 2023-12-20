@@ -53,11 +53,14 @@ def contact(request):
     return render(request, 'oasis/contact.html', context)
 
 
-def branches(request, branch):
+def branches(request, name):
 
-    branch = Branch.objects.filter(id=branch.id)
+    branch = Branch.objects.get(name=name)
 
     context = {
         'branch': branch,
         'page_title': 'Branches',
+        'branches': [branch for branch in Branch.objects.all()],
     }
+
+    return render(request, 'oasis/branch.html', context)

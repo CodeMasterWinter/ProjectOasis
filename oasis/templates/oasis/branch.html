@@ -1,0 +1,57 @@
+{% extends 'oasis/base.html' %}
+{% load static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'oasis/branch.css' %}">
+{% endblock %}
+
+{% block header %}
+<div class="header-content px-5">
+    <div class="header-image">
+        <img src="{{branch.image.url}}" class="header-img">
+    </div>
+    <h2 class="display-2 header-heading">
+        {{branch}}
+        <hr class="header-hr mt-2">
+    </h2>
+</div>
+{% endblock %}
+{% block bodycontent %}
+    <div class="scripture-divider my-5 text-center">
+        <p class="divider-title fw-bold"><i>"They devoted themselves to the apostles' teaching and to fellowship, to the breaking of bread and to prayer. "</p></i>
+        <p class="divider-verse">Acts 2:42</p>
+    </div>
+    <section id="branch-contact" class="my-5">
+        <div class="container-xl contact-container p-0">
+            <div class="display-3 contact-header ms-3">Reach Out:</div>
+            <div class="contact-content">
+                <div class="address-block">
+                    <i class="fa-solid fa-house block-icon pb-4"></i>
+                    <h2 class="block-title">Address</h2>
+                    <h5 class="block-content px-5 pt-4">{{branch.address}}</h5>
+                </div>
+                <div class="number-block">
+                    <i class="fa-solid fa-phone block-icon pb-4"></i>
+                    <h2 class="block-title">Phone Number</h2>
+                    <h5 class="block-content px-5 pt-4">{{branch.number}}</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="history" class="my-5">
+        <div class="container-xl history-container">
+            <img src="{% static 'oasis/images/oasis-logo.png' %}" alt="" class="welcome-letterhead my-3">
+        <h1 class="display-3 history-heading">History</h1>
+        <hr class="my-5">
+        <p class="history-text">{{branch.history}}</p>
+        </div>
+    </section>
+        {% if messages %}
+            {% for message in messages %}
+                <div class="alert alert-{{ message.tags }} m-5">
+                    <i class="fa-solid fa-circle-info"></i>
+                    {{ message }}
+                </div>
+            {% endfor %}
+        {% endif %}
+{% endblock %}

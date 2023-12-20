@@ -11,7 +11,7 @@ class Branch(models.Model):
     address = models.CharField(max_length=255)
     number = PhoneNumberField(region='ZA')
     history = models.TextField()
-    image = models.ImageField()
+    image = models.ImageField(upload_to='media/')
 
     def __str__(self):
 

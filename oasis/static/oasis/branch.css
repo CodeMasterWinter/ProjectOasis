@@ -1,0 +1,174 @@
+* {
+    font-family: 'Montserrat';;
+}
+
+
+header {
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    background: url('images/oasis-bg-textless.jpg') top no-repeat;
+    background-size: cover;
+}
+
+.header-content {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-self: flex-end;
+    justify-content: center;
+}
+
+.header-image {
+    flex: 0.4;
+    height: 100%;
+}
+
+.header-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+.header-heading {
+    flex: 0.6;
+    text-align: center;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.header-hr {
+    width: 45%;
+    opacity: 1;
+    height: 5px;
+    border: none;
+    margin: auto;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+#history {
+    text-align: center;
+    background: url(images/value-backdrop-blue.png) center no-repeat;
+    background-size: contain;
+}
+
+.history-container {
+    width: 100%;
+    height: 100%;
+}
+
+.welcome-letterhead {
+    width: 5vw;
+    height: auto;
+}
+
+#history hr{
+    width: 40%;
+    opacity: 1;
+    height: 5px;
+    border: none;
+    margin: auto;
+    background: linear-gradient(to right, #BF953F, #FCF6BA, #B38728, #FBF5B7, #AA771C);
+}
+
+.history-heading {
+    font-weight: 600;
+}
+
+.history-text {
+    font-weight: 600;
+    word-spacing: 5%;
+}
+
+#branch-contact {
+    height: 50vh;
+}
+
+.contact-container {
+    height: 100%;
+    display: flex;
+    overflow: hidden;
+    position: relative;
+    align-items: center;
+}
+
+.contact-container::before{
+    width: 50%;
+    left: -10vw;
+    z-index: 2;
+    content: "";
+    height: 100%;
+    display: flex;
+    font-size: 3em;
+    color: #ffffff;
+    font-weight: 600;
+    position: absolute;
+    align-items: center;
+    transform: skew(20deg);
+    justify-content: center;
+    border-right: 7px solid #BF953F;
+    background: url(images/oasis-bg-textless.jpg) right no-repeat;
+}
+
+.contact-header {
+    width: 35%;
+    z-index: 3;
+    color: #ffffff;
+    font-weight: 600;
+    position: relative;
+}
+
+.contact-content {
+    z-index: 1;
+    width: 65%;
+    height: 100%;
+    display: flex;
+    justify-content: end;
+    position: relative;
+}
+
+.contact-content::before {
+    width: 100%;
+    content: "";
+    height: 100%;
+    position: absolute;
+    transform: skew(20deg);
+}
+
+.address-block, .number-block {
+    width: 47%;
+    height: 100%;
+    display: flex;
+    z-index: 3;
+    color: #ffffff;
+    flex-direction: column;
+    background: url(images/letterhead-textless.png) center no-repeat;
+    background-size: contain;
+}
+
+.block-icon {
+    flex: 3;
+    display: flex;
+    font-size: 2.5em;
+    align-items: center;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.block-title {
+    flex: 1;
+    display: flex;
+    font-weight: 600;
+    align-items: top;
+    justify-content: center;
+}
+
+.block-content {
+    flex: 4;
+    display: flex;
+    text-align: center;
+    align-items: top;
+    justify-content: center;
+}
